@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.burger {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Nav List - Hidden by Default */
+.nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: #444;
+    list-style: none;
+}
+
+.nav-list li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+.nav-list.active {
+    display: flex;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 20px 20px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+}
+
+.cta-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+    background: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ff9900;
+}
+
+/* Features Section */
+.features {
+    padding: 40px 20px;
+    background: white;
+}
+
+.feature-box {
+    margin: 20px 0;
+}
+
+.feature-box i {
+    font-size: 40px;
+    color: #0072ff;
+}
+
+/* Download Section */
+.download {
+    padding: 40px 20px;
+    background: #0072ff;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+/* ===================== */
+/* 📌 MEDIA QUERIES */
+/* ===================== */
+
+/* Tablets (768px and above) */
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        width: auto;
+    }
+
+    .nav-list li {
+        padding: 0;
+        border: none;
+        margin: 0 15px;
+    }
+
+    .nav-list a {
+        padding: 10px 15px;
+    }
+}
+
+/* Desktops (1024px and above) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .cta-btn {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
+}
